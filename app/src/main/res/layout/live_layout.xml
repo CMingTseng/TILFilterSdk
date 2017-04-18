@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+    <com.tencent.ilivesdk.view.AVRootView
+        android:id="@+id/avRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/LinearRoomParam">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/my_login_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/btn_blue"
+                    android:textSize="22sp"/>
+
+            <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                android:text="logout"
+                    android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/room_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:hint="roomid(int)"
+                android:inputType="number"
+                android:textColor="@color/btn_blue"
+                android:textColorHint="@color/colorGray3"
+                android:textSize="14sp" />
+
+            <Button
+                    android:id="@+id/create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/room_num"
+                    android:text="createRoom"
+                    android:textColor="@color/white"/>
+
+            <Button
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                android:text="backRoom"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                android:layout_alignBaseline="@+id/room_num"
+                android:layout_alignBottom="@+id/room_num"
+                android:layout_toRightOf="@+id/create"
+                android:layout_toEndOf="@+id/create" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/room_num_join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="roomid(int)"
+                android:inputType="number"
+                android:textColor="@color/btn_blue"
+                android:textColorHint="@color/colorGray3"
+                android:textSize="14sp" />
+
+
+            <EditText
+                    android:id="@+id/host_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:hint="hostId"
+                    android:textColor="@color/btn_blue"
+                    android:textColorHint="@color/colorGray3"
+                android:textSize="14sp" />
+
+            <Button
+                    android:id="@+id/join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="joinRoom"
+                    android:textColor="@color/white"/>
+
+            <Button
+                    android:id="@+id/switchRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="switch"
+                    android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:id="@+id/text_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|top"
+                    android:hint="text msg"
+                    android:textColor="@color/btn_blue"
+                    android:textColorHint="@color/colorGray3"
+                android:textSize="14sp" />
+
+            <Button
+                    android:id="@+id/text_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="send"
+                    android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+            <EditText
+                    android:id="@+id/mem_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|top"
+                    android:hint="mem id"
+                    android:textColor="@color/btn_blue"
+                    android:textColorHint="@color/colorGray3"
+                android:textSize="14sp" />
+
+            <Button
+                    android:id="@+id/invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="invite"
+                    android:textColor="@color/white"/>
+
+            <Button
+                    android:id="@+id/close_mem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="closeMem"
+                    android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:id="@+id/PTUlinearLayout"
+        android:weightSum="1"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
+
+        <Button
+            android:text="切换滤镜"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btSwitchFIlter"
+            android:textSize="12sp" />
+
+        <Button
+            android:text="取消滤镜"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btCancelFIlter"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/linearLayout3"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:text="抓取日志"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btLogCapture"
+                android:textSize="12sp" />
+
+            <Button
+                android:text="隐藏房间信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btShowRoomParam"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="1"
+        android:id="@+id/LinearBeautyParam"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="312dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="美颜"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blueText"
+                android:textColor="@color/btn_red" />
+            <TextView
+                android:text="8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textBlurLevel"
+                android:textSize="10sp"
+                android:textColor="@color/btn_red" />
+
+            <SeekBar
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:progress="8"
+                android:id="@+id/seekBarBlur"
+                android:layout_weight="0.02" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="312dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="美白"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textColor="@color/btn_red" />
+
+            <TextView
+                android:text="8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textWhiteLevel"
+                android:textSize="10sp"
+                android:textColorHighlight="@color/btn_red"
+                android:textColor="@color/btn_red" />
+
+            <SeekBar
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:progress="8"
+                android:id="@+id/seekBarWhite"
+                android:layout_weight="0.21" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/login_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="简单直播 (ID不能是纯数字,纯中文)"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="100dp">
+
+            <EditText
+                android:id="@+id/my_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="your id    "
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorGray1" />
+
+            <EditText
+                android:id="@+id/my_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="your pwd  "
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorGray1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="140dp">
+
+            <Button
+                android:id="@+id/login_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="login"/>
+
+            <Button
+                android:id="@+id/register_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="register"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
